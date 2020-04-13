@@ -5,27 +5,22 @@ using Abc.Pages.Extensions;
 using Microsoft.AspNetCore.Html;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Pages.Extensions
-{
-    [TestClass]
-    public class HypertextLinkForHtmlExtensionTests : BaseTests
-    {
+namespace Abc.Tests.Pages.Extensions {
+
+    [TestClass] public class HypertextLinkForHtmlExtensionTests : BaseTests {
+
         [TestInitialize] public virtual void TestInitialize() => type = typeof(HypertextLinkForHtmlExtension);
 
-        [TestMethod]
-        public void HypertextLinkForTest()
-        {
+        [TestMethod] public void HypertextLinkForTest() {
             var s = GetRandom.String();
-            var items = new[] { new Link("AA", "AAA"), new Link("BB", "BBB") };
-            var obj = new HtmlHelperMock<UnitView>().HypertextLinkFor(s, items);
+            var items = new[] {new Link("AA", "AAA"), new Link("BB", "BBB")};
+            var obj = new htmlHelperMock<UnitView>().HypertextLinkFor(s, items);
             Assert.IsInstanceOfType(obj, typeof(HtmlContentBuilder));
         }
 
-        [TestMethod]
-        public void HtmlStringsTest()
-        {
+        [TestMethod] public void HtmlStringsTest() {
             var s = GetRandom.String();
-            var items = new[] { new Link("AA", "AAA"), new Link("BB", "BBB") };
+            var items = new[] {new Link("AA", "AAA"), new Link("BB", "BBB")};
             var expected = new List<string> {
                 "<p>", $"<a>{s}</a>", $"<a> </a><a href=\"AAA\">AA</a>",
                 $"<a> </a><a href=\"BBB\">BB</a>", "</p>"
@@ -33,5 +28,7 @@ namespace Abc.Tests.Pages.Extensions
             var actual = HypertextLinkForHtmlExtension.htmlStrings(s, items);
             TestHtml.Strings(actual, expected);
         }
+
     }
+
 }

@@ -11,7 +11,7 @@ namespace Abc.Tests.Pages.Quantity
             where TObj : Entity<TData>
             where TData : UniqueEntityData, new()
         {
-            private readonly List<TObj> list;
+            internal readonly List<TObj> list;
             public baseTestRepository()
             {
                 list = new List<TObj>();
