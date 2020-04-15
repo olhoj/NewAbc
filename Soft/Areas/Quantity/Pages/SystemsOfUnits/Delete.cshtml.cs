@@ -17,7 +17,6 @@ namespace Abc.Soft.Areas.Quantity.Pages.SystemOfUnits
 
         public async Task<IActionResult> OnPostAsync(string id, string fixedFilter, string fixedValue)
         {
-
             await deleteObject(id, fixedFilter, fixedValue);
             return Redirect(IndexUrl);
         }

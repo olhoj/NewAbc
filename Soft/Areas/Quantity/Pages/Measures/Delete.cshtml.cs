@@ -1,17 +1,13 @@
 ﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Abc.Domain.Quantity;
 using Abc.Pages.Quantity;
-using Abc.Facade.Quantity;
+using Microsoft.AspNetCore.Mvc;
 
-namespace Abc.Soft
+namespace Abc.Soft.Areas.Quantity.Pages.Measures
 {
     public class DeleteModel : MeasuresPage
     {
-        public DeleteModel(IMeasuresRepository r) : base(r)
-        {
-        }
-
+        public DeleteModel(IMeasuresRepository r, IMeasureTermsRepository t) : base(r, t) { }
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {
             await getObject(id, fixedFilter, fixedValue);
@@ -20,6 +16,7 @@ namespace Abc.Soft
 
         public async Task<IActionResult> OnPostAsync(string id, string fixedFilter, string fixedValue)
         {
+
             await deleteObject(id, fixedFilter, fixedValue);
             return Redirect(IndexUrl);
         }

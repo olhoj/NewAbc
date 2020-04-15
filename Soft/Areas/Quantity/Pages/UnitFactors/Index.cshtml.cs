@@ -9,7 +9,6 @@ namespace Abc.Soft.Areas.Quantity.Pages.UnitFactors
         public IndexModel(IUnitFactorsRepository r) : base(r)
         {
         }
-
         public async Task OnGetAsync(string sortOrder,
             string currentFilter, string searchString, int? pageIndex, string fixedFilter, string fixedValue)
         {

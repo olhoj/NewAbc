@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Abc.Core;
-using Abc.Facade.Common;
+using Abc.Domain.Quantity;
 using Abc.Pages.Extensions;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -22,7 +22,7 @@ namespace Abc.Tests.Pages.Extensions {
         [TestMethod]
         public void EditControlsForEnumTest()
         {
-            var obj = new htmlHelperMock<testClass>().EditControlsForEnum(x => x.Gender);
+            var obj = new HtmlHelperMock<testClass>().EditControlsForEnum(x => x.Gender);
             Assert.IsInstanceOfType(obj, typeof(HtmlContentBuilder));
         }
 
@@ -31,12 +31,9 @@ namespace Abc.Tests.Pages.Extensions {
         {
             var selectList = new SelectList(Enum.GetNames(typeof(IsoGender)));
             var expected = new List<string> { "<div", "LabelFor", "DropDownListFor", "ValidationMessageFor", "</div>" };
-            var actual = EditControlsForEnumHtmlExtension.htmlStrings(new htmlHelperMock<testClass>(), 
+            var actual = EditControlsForEnumHtmlExtension.htmlStrings(new HtmlHelperMock<testClass>(), 
                 x => x.Gender, selectList);
             TestHtml.Strings(actual, expected);
         }
-
-
     }
-
 }

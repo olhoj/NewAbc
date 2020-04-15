@@ -4,7 +4,7 @@ using Abc.Domain.Quantity;
 
 namespace Abc.Facade.Quantity
 {
-    public class UnitViewFactory
+    public static class UnitViewFactory
     {
         public static Unit Create(UnitView v)
         {

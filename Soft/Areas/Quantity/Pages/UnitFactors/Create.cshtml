@@ -5,10 +5,11 @@
 @{
     Layout = "_Create";
 }
+
 <body>
-    @Html.EditControlsFor(x => x.Item.SystemOfUnitsId)
-    @Html.EditControlsFor(x => x.Item.UnitId)
-    @Html.EditControlsFor(x => x.Item.Factor)
-    @Html.EditControlsFor(x => x.Item.ValidFrom)
-    @Html.EditControlsFor(x => x.Item.ValidTo)
+    @Html.EditControlsForDropDown(model => model.Item.SystemOfUnitsId, Model.SystemsOfUnits)
+    @Html.EditControlsForDropDown(model => model.Item.UnitId, Model.Units)
+    @Html.EditControlsFor(model => model.Item.Factor)
+    @Html.EditControlsFor(model => model.Item.ValidFrom)
+    @Html.EditControlsFor(model => model.Item.ValidTo)
 </body>

@@ -22,7 +22,7 @@ namespace Abc.Tests
 
         protected static void IsNullableProperty<T>(Func<T> get, Action<T> set)
         {
-            IsProperty(get, set);
+            IsProperty<T>(get, set);
             set(default);
             Assert.IsNull(get());
         }

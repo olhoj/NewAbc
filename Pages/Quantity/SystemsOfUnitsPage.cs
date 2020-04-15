@@ -5,8 +5,8 @@ using Abc.Facade.Quantity;
 namespace Abc.Pages.Quantity {
 
     public class
-        SystemsOfUnitsPage : CommonPage<ISystemsOfUnitsRepository, SystemOfUnits, SystemOfUnitsView, SystemOfUnitsData
-        > {
+        SystemsOfUnitsPage : CommonPage<ISystemsOfUnitsRepository, SystemOfUnits, 
+            SystemOfUnitsView, SystemOfUnitsData> {
 
         protected internal SystemsOfUnitsPage(ISystemsOfUnitsRepository r) : base(r) {
             PageTitle = "Systems of Units";
@@ -23,9 +23,7 @@ namespace Abc.Pages.Quantity {
         protected internal override SystemOfUnitsView toView(SystemOfUnits obj) {
             return SystemOfUnitsViewFactory.Create(obj);
         }
-
     }
-
 }
 
 
