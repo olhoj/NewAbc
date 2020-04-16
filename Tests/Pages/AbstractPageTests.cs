@@ -3,17 +3,20 @@ using Abc.Domain.Quantity;
 using Abc.Facade.Quantity;
 using Abc.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static Abc.Tests.Pages.Quantity.MeasuresPageTests;
 
-namespace Abc.Tests.Pages {
+namespace Abc.Tests.Pages
+{
 
     public abstract class AbstractPageTests<TClass, TBaseClass> : AbstractClassTests<TClass, TBaseClass>
-        where TClass : BasePage<IMeasuresRepository, Measure, MeasureView, MeasureData> {
+        where TClass : BasePage<IMeasuresRepository, Measure, MeasureView, MeasureData>
+    {
 
-        internal testRepository db; 
-        internal class testClass : CommonPage<IMeasuresRepository, Measure, MeasureView, MeasureData> {
+        internal testRepository db;
+        internal class testClass : CommonPage<IMeasuresRepository, Measure, MeasureView, MeasureData>
+        {
 
-            protected internal testClass(IMeasuresRepository r) : base(r) {
+            protected internal testClass(IMeasuresRepository r) : base(r)
+            {
                 PageTitle = "Measures";
             }
 
@@ -27,7 +30,7 @@ namespace Abc.Tests.Pages {
 
         }
 
-        internal class testRepository : baseTestRepository<Measure, MeasureData>, IMeasuresRepository { }
+        internal class testRepository : BaseTestRepositoryForUniqueEntity<Measure, MeasureData>, IMeasuresRepository { }
 
         [TestInitialize]
         public override void TestInitialize()

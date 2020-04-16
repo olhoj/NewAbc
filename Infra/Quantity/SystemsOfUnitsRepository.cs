@@ -3,7 +3,6 @@ using Abc.Domain.Quantity;
 
 namespace Abc.Infra.Quantity
 {
-
     public sealed class SystemsOfUnitsRepository : UniqueEntityRepository<SystemOfUnits, SystemOfUnitsData>,
         ISystemsOfUnitsRepository
     {

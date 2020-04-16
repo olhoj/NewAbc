@@ -4,9 +4,12 @@ using Abc.Pages.Extensions;
 using Microsoft.AspNetCore.Html;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Pages.Extensions {
+namespace Abc.Tests.Pages.Extensions
+{
 
-    [TestClass] public class SearchControlsForHtmlExtensionTests : BaseTests {
+    [TestClass]
+    public class SearchControlsForHtmlExtensionTests : BaseTests
+    {
 
         private const string filter = "filter";
         private const string linkToFullList = "url";
@@ -14,12 +17,16 @@ namespace Abc.Tests.Pages.Extensions {
 
         [TestInitialize] public virtual void TestInitialize() => type = typeof(SearchControlsForHtmlExtension);
 
-        [TestMethod] public void SearchControlsForTest() {
-            var obj = new htmlHelperMock<UnitView>().SearchControlsFor(filter, linkToFullList, text);
+        [TestMethod]
+        public void SearchControlsForTest()
+        {
+            var obj = new HtmlHelperMock<UnitView>().SearchControlsFor(filter, linkToFullList, text);
             Assert.IsInstanceOfType(obj, typeof(HtmlContentBuilder));
         }
 
-        [TestMethod] public void HtmlStringsTest() {
+        [TestMethod]
+        public void HtmlStringsTest()
+        {
             var expected = new List<string> {
                 "<form asp-action=\"./Index\" method=\"get\">",
                 "<div class=\"form-inline col-md-6\">",
@@ -36,7 +43,5 @@ namespace Abc.Tests.Pages.Extensions {
             var actual = SearchControlsForHtmlExtension.htmlStrings(filter, linkToFullList, text);
             TestHtml.Strings(actual, expected);
         }
-
     }
-
 }

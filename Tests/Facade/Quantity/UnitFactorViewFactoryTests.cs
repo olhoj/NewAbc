@@ -16,9 +16,7 @@ namespace Abc.Tests.Facade.Quantity
         }
 
         [TestMethod]
-        public void CreateTest()
-        {
-        }
+        public void CreateTest() { }
 
         [TestMethod]
         public void CreateObjectTest()

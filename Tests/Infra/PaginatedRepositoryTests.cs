@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Abc.Aids;
 using Abc.Data.Quantity;
@@ -17,7 +16,6 @@ namespace Abc.Tests.Infra
     {
         private class testClass : PaginatedRepository<Measure, MeasureData>
         {
-
             public testClass(DbContext c, DbSet<MeasureData> s) : base(c, s) { }
 
             protected internal override Measure toDomainObject(MeasureData d) => new Measure(d);

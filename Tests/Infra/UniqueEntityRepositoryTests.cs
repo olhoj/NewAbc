@@ -3,7 +3,5 @@
 namespace Abc.Tests.Infra
 {
     [TestClass]
-    public class UniqueEntityRepositoryTests
-    {
-    }
+    public class UniqueEntityRepositoryTests { }
 }

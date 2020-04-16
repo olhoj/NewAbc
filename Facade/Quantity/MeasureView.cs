@@ -1,4 +1,4 @@
-﻿using Abc.Domain.Quantity;
+﻿using Abc.Facade.Common;
 
 namespace Abc.Facade.Quantity
 {

@@ -4,15 +4,14 @@ using Abc.Facade.Quantity;
 
 namespace Abc.Pages.Quantity {
 
-    public class
-        SystemsOfUnitsPage : CommonPage<ISystemsOfUnitsRepository, SystemOfUnits, 
+    public class SystemsOfUnitsPage : CommonPage<ISystemsOfUnitsRepository, SystemOfUnits, 
             SystemOfUnitsView, SystemOfUnitsData> {
 
         protected internal SystemsOfUnitsPage(ISystemsOfUnitsRepository r) : base(r) {
             PageTitle = "Systems of Units";
         }
 
-        public override string ItemId => Item.Id;
+        public override string ItemId => Item?.Id ?? string.Empty;
 
         protected internal override string getPageUrl() => "/Quantity/SystemsOfUnits";
 

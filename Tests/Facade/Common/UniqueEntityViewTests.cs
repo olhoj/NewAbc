@@ -1,4 +1,4 @@
-using Abc.Domain.Quantity;
+using Abc.Facade.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Facade.Common

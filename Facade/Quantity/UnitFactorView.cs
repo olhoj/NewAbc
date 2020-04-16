@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Abc.Domain.Quantity;
+using Abc.Facade.Common;
 
 namespace Abc.Facade.Quantity
 {
-    public sealed class UnitFactorView: PeriodView
+    public sealed class UnitFactorView : PeriodView
     {
         [Required]
         [DisplayName("Unit")]

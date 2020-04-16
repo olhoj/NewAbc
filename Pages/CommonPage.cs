@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Abc.Pages
 {
-
     public abstract class CommonPage<TRepository, TDomain, TView, TData> :
         PaginatedPage<TRepository, TDomain, TView, TData>
         where TRepository : ICrudMethods<TDomain>, ISorting, IFiltering, IPaging

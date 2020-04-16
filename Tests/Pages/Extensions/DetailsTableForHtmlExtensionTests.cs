@@ -10,7 +10,5 @@ namespace Abc.Tests.Pages.Extensions {
         [TestMethod] public void DetailsTableForTest() {
             Assert.Inconclusive();
         }
-
     }
-
 }

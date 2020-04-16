@@ -1,5 +1,4 @@
 ﻿using Abc.Aids;
-using Abc.Data.Common;
 using Abc.Data.Quantity;
 using Abc.Domain.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -34,6 +33,13 @@ namespace Abc.Tests.Domain.Common
             Assert.IsNull(obj.Data);
             obj.Data = d;
             Assert.AreSame(d, obj.Data);
+        }
+
+        [TestMethod]
+        public void CanSetNullDataTest()
+        {
+            obj.Data = null;
+            Assert.IsNull(obj.Data);
         }
     }
 }

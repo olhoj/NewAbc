@@ -1,4 +1,4 @@
-using Abc.Domain.Quantity;
+using Abc.Facade.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Facade.Common
@@ -6,7 +6,7 @@ namespace Abc.Tests.Facade.Common
     [TestClass]
     public class DefinedViewTests : AbstractClassTests<DefinedView, NamedView>
     {
-        private class testClass: DefinedView { }
+        private class testClass : DefinedView { }
 
         [TestInitialize]
         public override void TestInitialize()
@@ -18,7 +18,7 @@ namespace Abc.Tests.Facade.Common
         [TestMethod]
         public void DefinitionTest()
         {
-            IsNullableProperty(()=>obj.Definition, x=>obj.Definition=x);
+            IsNullableProperty(() => obj.Definition, x => obj.Definition = x);
         }
     }
 }

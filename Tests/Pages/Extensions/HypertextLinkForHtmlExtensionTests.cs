@@ -14,7 +14,7 @@ namespace Abc.Tests.Pages.Extensions {
         [TestMethod] public void HypertextLinkForTest() {
             var s = GetRandom.String();
             var items = new[] {new Link("AA", "AAA"), new Link("BB", "BBB")};
-            var obj = new htmlHelperMock<UnitView>().HypertextLinkFor(s, items);
+            var obj = new HtmlHelperMock<UnitView>().HypertextLinkFor(s, items);
             Assert.IsInstanceOfType(obj, typeof(HtmlContentBuilder));
         }
 

@@ -12,12 +12,13 @@ namespace Abc.Pages.Extensions
             this IHtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TResult>> expression,
             IEnumerable<SelectListItem> items)
         {
-            var htmlStrings = EditControlsForDropDownHtmlExtension.HtmlStrings(htmlHelper, expression, items);
+
+            var htmlStrings = EditControlsForDropDownHtmlExtension.htmlStrings(htmlHelper, expression, items);
 
             return new HtmlContentBuilder(htmlStrings);
         }
 
-        internal static List<object> HtmlStrings<TModel, TResult>(IHtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TResult>> expression, IEnumerable<SelectListItem> items)
+        internal static List<object> htmlStrings<TModel, TResult>(IHtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TResult>> expression, IEnumerable<SelectListItem> items)
         {
             return new List<object> {
                 new HtmlString("<div class=\"form-group\">"),
@@ -27,5 +28,6 @@ namespace Abc.Pages.Extensions
                 new HtmlString("</div>")
             };
         }
+
     }
 }

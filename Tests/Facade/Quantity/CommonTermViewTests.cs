@@ -1,11 +1,11 @@
-﻿using Abc.Domain.Quantity;
+﻿using Abc.Facade.Common;
 using Abc.Facade.Quantity;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Facade.Quantity
 {
     [TestClass]
-    public class CommonTermViewTests:AbstractClassTests<CommonTermView, PeriodView>
+    public class CommonTermViewTests : AbstractClassTests<CommonTermView, PeriodView>
     {
         private class testClass : CommonTermView { }
 
@@ -16,9 +16,7 @@ namespace Abc.Tests.Facade.Quantity
             obj = new testClass();
         }
 
-        [TestMethod]
-        public void TermIdTest() => IsNullableProperty(() => obj.TermId, x => obj.TermId = x);
-        [TestMethod]
-        public void PowerTest() => IsProperty(() => obj.Power, x => obj.Power = x);
+        [TestMethod] public void TermIdTest() => IsNullableProperty(() => obj.TermId, x => obj.TermId = x);
+        [TestMethod] public void PowerTest() => IsProperty(() => obj.Power, x => obj.Power = x);
     }
 }

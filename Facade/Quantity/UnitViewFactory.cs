@@ -9,10 +9,7 @@ namespace Abc.Facade.Quantity
         public static Unit Create(UnitView v)
         {
             var d = new UnitData();
-            {
-                Copy.Members(v, d);
-
-            }
+            Copy.Members(v, d);
             return new Unit(d);
         }
         public static UnitView Create(Unit o)

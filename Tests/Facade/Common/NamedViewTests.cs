@@ -1,4 +1,4 @@
-using Abc.Domain.Quantity;
+using Abc.Facade.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Facade.Common
@@ -6,7 +6,7 @@ namespace Abc.Tests.Facade.Common
     [TestClass]
     public class NamedViewTests : AbstractClassTests<NamedView, UniqueEntityView>
     {
-        private class testClass: NamedView { }
+        private class testClass : NamedView { }
 
         [TestInitialize]
         public override void TestInitialize()

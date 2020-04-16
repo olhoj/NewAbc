@@ -14,7 +14,5 @@ namespace Abc.Tests.Pages.Extensions {
         {
             Assert.Inconclusive();
         }
-
     }
-
 }

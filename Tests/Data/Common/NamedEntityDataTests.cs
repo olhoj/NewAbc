@@ -27,6 +27,5 @@ namespace Tests.Data.Common
         {
             IsNullableProperty(() => obj.Code, x => obj.Code = x);
         }
-
     }
 }

@@ -19,7 +19,7 @@ namespace Abc.Soft.Areas.Quantity.Pages.Units
         public async Task<IActionResult> OnPostAsync(string fixedFilter, string fixedValue)
         {
             await updateObject(fixedFilter, fixedValue);
-            return Redirect(IndexUrl);
+            return Redirect(PageUrl);
         }
     }
 }

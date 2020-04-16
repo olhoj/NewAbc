@@ -3,7 +3,7 @@
 namespace Abc.Tests.Infra
 {
     [TestClass]
-    public class IsInfraTested: AssemblyTests
+    public class IsInfraTested : AssemblyTests
     {
         private const string assembly = "Abc.Infra";
 

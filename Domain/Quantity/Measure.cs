@@ -7,6 +7,6 @@ namespace Abc.Domain.Quantity
     public sealed class Measure : Entity<MeasureData>
     {
         public Measure() : this(null) { }
-        public Measure(MeasureData data, List<MeasureTerm> terms = null) : base(data) { }
+        public Measure(MeasureData data) : base(data) { }
     }
 }

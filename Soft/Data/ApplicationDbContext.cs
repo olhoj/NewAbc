@@ -1,24 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Abc.Infra.Quantity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Abc.Domain.Quantity;
-using Abc.Infra.Quantity;
 
 namespace Abc.Soft.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
-        }
-        
+            : base(options) { }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            initializeTables(builder);
+        }
 
+        internal void initializeTables(ModelBuilder builder)
+        {
             QuantityDbContext.InitializeTables(builder);
         }
     }

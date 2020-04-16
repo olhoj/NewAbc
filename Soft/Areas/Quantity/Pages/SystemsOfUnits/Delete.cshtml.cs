@@ -10,7 +10,6 @@ namespace Abc.Soft.Areas.Quantity.Pages.SystemOfUnits
         public DeleteModel(ISystemsOfUnitsRepository r) : base(r) { }
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {
-
             await getObject(id, fixedFilter, fixedValue);
             return Page();
         }

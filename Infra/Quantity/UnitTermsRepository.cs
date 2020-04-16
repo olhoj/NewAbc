@@ -6,10 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Abc.Infra.Quantity
 {
-
     public sealed class UnitTermsRepository : PaginatedRepository<UnitTerm, UnitTermData>, IUnitTermsRepository
     {
-
         public UnitTermsRepository() : this(null) { }
 
         public UnitTermsRepository(QuantityDbContext c) : base(c, c?.UnitTerms) { }

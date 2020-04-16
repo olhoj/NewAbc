@@ -10,7 +10,7 @@ namespace Abc.Soft.Areas.Quantity.Pages.Measures
         public DetailsModel(IMeasuresRepository r, IMeasureTermsRepository t) : base(r, t) { }
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {
-            await getObject(id, fixedValue, fixedValue);
+            await getObject(id, fixedFilter, fixedValue);
             return Page();
         }
     }

@@ -13,14 +13,15 @@ namespace Abc.Pages.Extensions
         public static IHtmlContent EditControlsForEnum<TModel, TResult>(
             this IHtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TResult>> expression)
         {
+
             var selectList = new SelectList(Enum.GetNames(typeof(TResult)));
 
-            var htmlStrings = EditControlsForEnumHtmlExtension.HtmlStrings(htmlHelper, expression, selectList);
+            var htmlStrings = EditControlsForEnumHtmlExtension.htmlStrings(htmlHelper, expression, selectList);
 
             return new HtmlContentBuilder(htmlStrings);
         }
 
-        private static List<object> HtmlStrings<TModel, TResult>(IHtmlHelper<TModel> htmlHelper,
+        internal static List<object> htmlStrings<TModel, TResult>(IHtmlHelper<TModel> htmlHelper,
             Expression<Func<TModel, TResult>> expression, SelectList selectList)
         {
             return new List<object> {
@@ -31,5 +32,7 @@ namespace Abc.Pages.Extensions
                 new HtmlString("</div>")
             };
         }
+
     }
+
 }

@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Abc.Tests.Infra.Quantity
 {
     [TestClass]
-    public class UnitsRepositoryTests: RepositoryTests<UnitsRepository, Unit, UnitData>
+    public class UnitsRepositoryTests : RepositoryTests<UnitsRepository, Unit, UnitData>
     {
         [TestInitialize]
         public override void TestInitialize()

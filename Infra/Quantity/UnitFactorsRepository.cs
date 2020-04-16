@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Abc.Infra.Quantity
 {
-
     public sealed class UnitFactorsRepository : PaginatedRepository<UnitFactor, UnitFactorData>, IUnitFactorsRepository
     {
 
