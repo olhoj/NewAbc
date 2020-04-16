@@ -21,6 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aids", "Aids\Aids.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{A3C06030-B3BC-4E3D-BD15-83F71A181C33}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log", "log", "{55C5A111-18A3-4F60-9C88-44F30191C597}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\Time recording log.xlsx = ..\..\..\Desktop\Time recording log.xlsx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
